@@ -1,42 +1,49 @@
-/**
- * 
- */
 package com.zwustudy.javamagic.quine;
 
 /**
+ * 
  * @author zwustudy
- *
+ * 程序不通过读文件的形式输出源代码本身
  */
 public class Quine {
-
-	/**
-	 * @param args
-	 */
+	
 	public static void main(String[] args) {
-		char q = 34;      // Quotation mark character
-		String[] l = {    // Array of source code
-		    "public class Quine",
-		    "{",
-		    "  public static void main(String[] args)",
-		    "  {",
-		    "    char q = 34;      // Quotation mark character",
-		    "    String[] l = {    // Array of source code",
-		    "    ",
-		    "    };",
-		    "    for(int i = 0; i < 6; i++)           // Print opening code",
-		    "        System.out.println(l[i]);",
-		    "    for(int i = 0; i < l.length; i++)    // Print string array",
-		    "        System.out.println(l[6] + q + l[i] + q + ',');",
-		    "    for(int i = 7; i < l.length; i++)    // Print this code",
-		    "        System.out.println(l[i]);",
-		    "  }",
-		    "}",
-		    };
-		    for(int i = 0; i < 6; i++)           // Print opening code
-		        System.out.println(l[i]);
-		    for(int i = 0; i < l.length; i++)    // Print string array
-		        System.out.println(l[6] + q + l[i] + q + ',');
-		    for(int i = 7; i < l.length; i++)    // Print this code
-		        System.out.println(l[i]);
-		  }
+		char q = 34;
+		String[] ll = {
+				"package com.zwustudy.javamagic.quine;",
+				"",
+				"/**",
+				" * ",
+				" * @author zwustudy",
+				" *",
+				" */",
+				"public class Quine {",
+				"	",
+				"	public static void main(String[] args) {",
+				"		char q = 34;",
+				"		String[] ll = {",
+				"				",
+				"		};",
+				"		for (int i = 0; i < 12; i++) {",
+				"			System.out.println(ll[i]);",
+				"		}",
+				"		for (int i = 0; i < ll.length; i++) {",
+				"			System.out.println(ll[12] + q + ll[i] + q + ',');",
+				"		}",
+				"		for (int i = 12; i < ll.length; i++) {",
+				"			System.out.println(ll[i]);",
+				"		}",
+				"	}",
+				"}"
+		};
+		for (int i = 0; i < 12; i++) {
+			System.out.println(ll[i]);
+		}
+		for (int i = 0; i < ll.length; i++) {
+			System.out.println(ll[12] + q + ll[i] + q + ',');
+		}
+		for (int i = 12; i < ll.length; i++) {
+			System.out.println(ll[i]);
+		}
+	}
 }
