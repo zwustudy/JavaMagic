@@ -29,7 +29,6 @@
 	<build>
 		<plugins>
 			<plugin>
-				<finalName>${project.artifactId}-${project.version}</finalName>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.7.0</version>
 				<configuration>
