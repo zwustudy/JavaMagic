@@ -13,4 +13,12 @@ where i doing some research about java new features
 
 # ReentrantReadWriteLock的用例以及实现写锁降级为读锁
 
+# 实现三种自旋锁SpinLock直接基于CAS机制自旋、TicketLock基于期望票据自旋、CLHLock基于前一个节点是否释放锁的标志自旋
+
+并分析自旋锁的优缺点
+
+# 测试lock/lockInterruptibly的异同点
+
+# 基于三种方式实现了一个CycleAtomicInteger，并测试三种效果的对比
+
 
